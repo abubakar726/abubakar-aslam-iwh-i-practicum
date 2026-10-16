@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Pets List
+    p Here are your pets stored in HubSpot.
+    a(href="/update-cobj") Add to this table
+    br
+    br
+    table(border="1")
+      thead
+        tr
+          th Name
+          th Species
+          th Age
+      tbody
+        each pet in data
+          tr
+            td= pet.properties.name
+            td= pet.properties.species
+            td= pet.properties.age
+    br
